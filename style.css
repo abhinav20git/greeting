@@ -1,57 +1,30 @@
-
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      background-color: #f4f4f9;
-    }
-    .input-container {
-      margin: 20px;
-    }
-    input {
-      padding: 10px;
-      font-size: 16px;
-      width: 250px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-    button:hover {
-      background-color: #45a049;
-      transform: scale(1.05);
-    }
-    .greeting {
-      font-size: 24px;
-      margin-top: 20px;
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
-    .greeting.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .error {
-      color: red;
-      font-size: 16px;
-      margin-top: 10px;
-      animation: fade-in 0.5s ease-in-out;
-    }
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+input, button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+.greeting {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.greeting.show {
+  opacity: 1;
+  transform: translateY(0);
+}
